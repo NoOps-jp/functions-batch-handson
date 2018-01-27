@@ -1,4 +1,4 @@
-# Module03: Azure Storage ExplorerでのQueue Storage操作
+# Module03: Azure Storageのキュー操作
 
 ## 1. Azure Storage Explorer を使う
 
@@ -29,10 +29,17 @@ Visual Studioの```funnctions-batchapps```ソリューションにある```Basic
 
 Azure Storage Explorerを使って、キューにメッセージを追加します。
 
-ここでは、任意の文字列を入力します。（例: testなど）
-
 ![m03-1](images/m03-1.png)
+
+1. [対象のストレージアカウント] - [Queues] - [作成したキュー名] を選択し、ダブルクリックします。
+
+1. [作成したキュー名]タブの [+ Add Message] ボタンをクリックします。
+
+1. Add Messageダイアログに、任意の文字列を入力します。（例: testなど）
+
+    - Expireは**1 Minutes**などに変更します
+    - [Encode message body in Base64] はチェックしたままにします。
 
 ### Functionの動作を確認
 
-ローカルで起動しているFunction App```BasicQueueTriggerApp```にメッセージが到達していることを確認します。
+ローカルで起動しているFunction App ```BasicQueueTriggerApp``` にメッセージが到達していることを確認します。
