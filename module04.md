@@ -41,3 +41,30 @@ $ func azure functionapp publish functions-batchapps
 1. Function App画面で、該当のFunction App以下にある[関数]を展開して、[BasicQueueTrigger]というFunctionが表示されていればデプロイは完了しています。
 
     ![m04-1](images/m04-1.png)
+
+## キューを使ってFunctionを起動する
+
+[module03](module03.md)で実施したように、Azure Storage Explorerを使って、キューに再度メッセージを追加します。
+
+> ローカルでのFunctionが実行されていないことを確認して下さい。
+
+1. [対象のストレージアカウント] - [Queues] - [作成したキュー名] を選択し、ダブルクリックします。
+
+1. [作成したキュー名]タブの [+ Add Message] ボタンをクリックします。
+
+1. Add Messageダイアログに、任意の文字列を入力します。（例: testなど）
+
+    - Expireは**1 Minutes**などに変更します
+    - [Encode message body in Base64] はチェックしたままにします。
+
+## デプロイしたFunctionの動作確認
+
+1. Azureポータルの全体メニューで **Fanction App** をクリックし、[module01](module01.md)で作成したFunction Appを選択します。
+
+1. Function App画面で、該当のFunction App以下にある[関数] - [BasicQueueTrigger]を展開します。
+
+1. [モニター] をクリックして、Functionの実行結果を確認します。
+
+    ![m04-2](images/m04-2.png)
+
+    > 反映するまで数分時間をおく必要があります。定期的に [Refresh] をクリックして下さい。
