@@ -10,8 +10,8 @@
     * API: **SQL** を選択
     * サブスクリプション: ハンズオン用に用意したサブスクリプション
     * リソースグループ: [module0](module0.md)で作成したリソースグループを選択（新規作成しない）
-    * 場所: 東日本か西日本（選択できなければ他の場所、できればリソースグループの場所と同一にする）
-    * **Geo 冗長の有効化** のチェックはここでは一旦外しておく
+    * 場所: Function Appをデプロイした場所と同一
+    * **Geo 冗長の有効化** のチェックはここでは外しておく
 
     **作成** をクリックします。
 
@@ -29,20 +29,20 @@
 
 1. Add Collection画面では以下のように設定して下さい。
 
-    * Database id: **Todo**
-    * Collection id: **Items**
+    * Database id: **Stocks**
+    * Collection id: **Price**
     * Storage capacity: **Fixed (10GB)** を選択
-    * Throughput: **400**
+    * Throughput: **1000**
 
     大文字、小文字の使い分けは任意ですが、クライアントアプリケーションの設定値等にも影響しますので、注意して下さい。
 
-    ![Collection作成画面](./images/module1-1.png)
+    ![Collection作成画面](./images/m05-1.png)
 
 1. **OK** をクリックします。
 
 ## 3. サンプルデータの追加
 
-1. データエクスプローラーのCOLLECTIONペインにて、 **Todo**データベース内の **Items**コレクションを展開し、**Documents**をクリックします。
+1. データエクスプローラーのCOLLECTIONペインにて、 **Stocks**データベース内の **Price**コレクションを展開し、**Documents**をクリックします。
 
 1. **Documents** タブで、**New Document**をクリックします。
 
@@ -50,13 +50,15 @@
 
     ```JSON
     {
-        "name": "サンプルデータ１",
-        "description": "これは1件目のサンプルデータです。",
-        "isComplete": false
+        "ticker": "7203",
+        "stockName": "トヨタ自動車",
+        "price": 6878,
+        "volume": 9547600,
+        "stockValue": 65668392800
     }
     ```
 
-    ```id```はJSONで記述を省略すると自動で採番されます。```name```と```description```の値は任意の文字列を入れて構いません。
+    ```id```はJSONで記述を省略すると自動で採番されます。値は任意の文字列を入れて構いません。
 
 1. **Documents** タブで、**Save**アイコンをクリックします。
 
@@ -69,3 +71,9 @@
 1. そのままJSONを編集し、**Save**アイコンをクリックすると、データを変更できます。
 
     管理項目は編集しないようにして下さい。
+
+## Op. Azure Storage Explorer を使う
+
+デスクトップアプリケーションである **Azure Storage Explorer** を使って、Azure Cosmos DBのデータを操作することができます（プレビュー）。
+
+* 利用手順: [Azure Cosmos DB を Azure Storage Explorer で管理する (プレビュー)](https://docs.microsoft.com/ja-jp/azure/cosmos-db/tutorial-documentdb-and-mongodb-in-storage-explorer)
