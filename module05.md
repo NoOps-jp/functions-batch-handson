@@ -1,4 +1,4 @@
-# Module05: バッチ処理データ保存先としてのCosmosDB構築
+# Module05: バッチ処理データ保存先としての Cosmos DB 構築
 
 ## 1. Azure Cosmos DBアカウントの作成
 
