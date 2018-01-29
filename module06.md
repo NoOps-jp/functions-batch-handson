@@ -29,7 +29,7 @@
             [FunctionName("CosmosBinding")]
             public static void Run(
                 [QueueTrigger("stock-queue-items")] Stock myQueueItem,
-                [DocumentDB("Stocks", "Price", Id = "id", ConnectionStringSetting = "StocksConnectionString")] out dynamic document,
+                [DocumentDB("Stocks", "Price", Id = "id", ConnectionStringSetting = "CosmosDbConnectionString")] out dynamic document,
                 TraceWriter log)
             {
                 log.Info($"Request for item with Ticker={myQueueItem.Ticker}.");
@@ -61,7 +61,7 @@
 
 ## 3. 設定ファイルにCosmos DBへの接続情報を追加する
 
-1. ```AajpFunctions```プロジェクト内の```local.settings.json```を開き、[module05](module05.md)でメモしておいたCosmos DBの接続文字列を```"AzureWebJobsStorage"```に入力して保存します。
+1. ```AajpFunctions```プロジェクト内の```local.settings.json```を開き、```"CosmosDbConnectionString"```というキーを追加し、値には[module05](module05.md)でメモしておいたCosmos DBの接続文字列を入力して保存します。
 
     ```json
     {
@@ -69,7 +69,7 @@
         "Values": {
             "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=xxxxxx;AccountKey=xxxxxxx4bVMg==;EndpointSuffix=core.windows.net",
             ""AzureWebJobsDashboard": DefaultEndpointsProtocol=https;AccountName=xxxxxx;AccountKey=xxxxxxx4bVMg==;EndpointSuffix=core.windows.net",
-            "CosmosDbConnectionString"; "AccountEndpoint=https://xxxxxxxx.documents.azure.com:443/;AccountKey=b8PM2D........oLzm254IA==;"
+            "CosmosDbConnectionString": "AccountEndpoint=https://xxxxxxxx.documents.azure.com:443/;AccountKey=b8PM2D........oLzm254IA==;"
         }
     }
     ```
@@ -119,3 +119,19 @@ Azure Storage Explorerを使って、キューにメッセージを追加しま�
 ### Functionの動作を確認
 
 ローカルで起動しているFunction App ```BasicQueueTriggerApp``` にメッセージが到達していることを確認します。
+
+## 5. Cosmos DBにデータが格納されていることを確認
+
+1. Azureポータルの全体メニューで **Azure Cosmos DB** をクリックし、対象のデータベースアカウント名を選択します。
+
+1. **Azure Cosmos DB アカウント** ブレードにて、 **データエクスプローラー** をクリックします。
+
+1. [Stocks] データベースの [Price] コレクションをクリックします。
+
+1. 画面上部の [New SQL Query] をクリックして以下のSQLを発行します。
+
+    ```sql
+    SELECT * FROM c WHERE c.ticker = '0002'
+    ```
+
+1. JSONデータが表示されれば問題ありません。
