@@ -40,7 +40,7 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 1. 構成済みの機能欄にある [アプリケーション設定] リンクをクリックします。
 
-1. アプリケーション設定タブの **[アプリケーション設定]** で以下のようキーと値を追加して下さい。
+1. アプリケーション設定タブの **[アプリケーション設定]** で以下のようにキーと値を追加して下さい。
 
     * キー: CosmosDbConnectionString
     * 値: AccountEndpoint=https://xxxxxxxx.documents.azure.com:443/;AccountKey=b8PM2D........oLzm254IA==;
