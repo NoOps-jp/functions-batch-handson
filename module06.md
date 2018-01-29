@@ -20,7 +20,6 @@
     using System.Threading;
     using Microsoft.Azure.WebJobs;
     using Microsoft.Azure.WebJobs.Host;
-    using Microsoft.Extensions.Logging;
 
     namespace AajpFunctions
     {
@@ -30,10 +29,10 @@
             [FunctionName("CosmosBinding")]
             public static void Run(
                 [QueueTrigger("stock-queue-items")] Stock myQueueItem,
-                [DocumentDB("Stocks", "Price", Id = "id", ConnectionStringSetting = "CosmosDbConnectionString")] out dynamic document,
-                ILogger logger)
+                [DocumentDB("Stocks", "Price", Id = "id", ConnectionStringSetting = "StocksConnectionString")] out dynamic document,
+                TraceWriter log)
             {
-                logger.LogInformation($"Request for item with Ticker={myQueueItem.Ticker}.");
+                log.Info($"Request for item with Ticker={myQueueItem.Ticker}.");
 
                 // Cosmos DB出力バインディングを使ってデータを保存
                 document = new
@@ -49,7 +48,7 @@
             }
         }
 
-        // Cosmos DBに格納するJSONのデータ型
+        // Queueに入ってくるJSONメッセージのデータ型
         public class Stock
         {
             public string Ticker { get; set; }
