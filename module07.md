@@ -1,4 +1,4 @@
-# Module07: Cosmos DB バインディングのFunctionを追加デプロイする
+# Module07: Cosmos DB 出力バインディングFunctionを追加デプロイする
 
 このステップでは、既存のFunction App（[module04](module04.md)でデプロイしたFunction App）に関数を追加します。
 
@@ -102,3 +102,5 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 1. JSONデータが表示されれば問題ありません。
 
+---
+[Back](module06.md) | [Next](module08.md)

@@ -135,3 +135,6 @@ Azure Storage Explorerを使って、キューにメッセージを追加しま�
     ```
 
 1. JSONデータが表示されれば問題ありません。
+
+---
+[Back](module05.md) | [Next](module07.md)

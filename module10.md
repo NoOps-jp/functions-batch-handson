@@ -1,4 +1,4 @@
-# Module10: Azure Monitor でバッチ処理全体の処理状況を分析する
+# Module10: Azure Monitor でバッチ処理の処理状況を分析する
 
 ## 1. Function App のインスタンス負荷
 
@@ -101,3 +101,6 @@ Function App の同時処理数を増やしていくと、データベースの�
 1. Azure Monitor の Cosmos DB メトリックを確認して、 [Max RUs Per Second] が予約したスループットを超えていないことを確認します。
 
 1. スループットに余裕がある場合は、再度スループットを調整し、コストを最適化します。
+
+---
+[Back](module09.md) | [Top](README.md)

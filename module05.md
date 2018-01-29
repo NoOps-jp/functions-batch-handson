@@ -1,4 +1,4 @@
-# Module05: バッチ処理データ保存先としての Cosmos DB 構築
+# Module05: Azure Cosmos DB の構築
 
 ## 1. Azure Cosmos DBアカウントの作成
 
@@ -87,3 +87,6 @@
 1. **プライマリ接続文字列**をコピーします。
 
 1. 手元のテキストファイル等に保存しておきます
+
+---
+[Back](module04.md) | [Next](module06.md)

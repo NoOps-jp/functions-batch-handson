@@ -75,3 +75,6 @@ Visual Studio for MacではGUIを使ったAzureへのFunctionデプロイがサ�
     ![m04-2](images/m04-2.png)
 
     > 反映するまで数分時間をおく必要があります。定期的に [Refresh] をクリックして下さい。
+
+---
+[Back](module03.md) | [Next](module05.md)

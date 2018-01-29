@@ -1,4 +1,4 @@
-# Module02: キュートリガーのFunction App作成(C#)
+# Module02: キュートリガーFunctionの作成
 
 ## 1. 開発環境の確認
 
@@ -56,3 +56,6 @@
         }
     }
     ```
+
+---
+[Back](module01.md) | [Next](module03.md)

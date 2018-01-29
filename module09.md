@@ -1,4 +1,4 @@
-# Module09: Application Insights でFunction Appをモニタリングする
+# Module09: Application Insights でFunction Appを監視する
 
 ## 1. Function App で Application Insights を有効にする
 
@@ -75,3 +75,6 @@
     * AzureWebJobsDashboard
 
     > 組み込みログを削除すると、Function Appのモニター画面にはログが表示されなくなります。
+
+---
+[Back](module08.md) | [Next](module10.md)
