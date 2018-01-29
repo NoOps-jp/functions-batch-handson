@@ -23,7 +23,7 @@ Azure Storage Explorerを使って、ストレージアカウントを展開し�
 
 Visual Studioの```funnctions-batchapps```ソリューションにある```BasicQueueTriggerApp```をスタートアッププロジェクトに設定します。
 
-デバッグで起動します。```BasicFunction```クラスの```Run```メソッド内に適宜ブレイクポイントをいれておくとキュートリガー起動時の動きを確認できます。
+デバッグで起動します。```BasicQueueTrigger```クラスの```Run```メソッド内に適宜ブレイクポイントをいれておくとキュートリガー起動時の動きを確認できます。
 
 ### キューにメッセージを追加
 
@@ -42,4 +42,4 @@ Azure Storage Explorerを使って、キューにメッセージを追加しま�
 
 ### Functionの動作を確認
 
-ローカルで起動しているFunction App ```BasicQueueTriggerApp``` にメッセージが到達していることを確認します。
+ローカルで起動しているFunction App ```AajpFunctions``` にメッセージが到達していることを確認します。

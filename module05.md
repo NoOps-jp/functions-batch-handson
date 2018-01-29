@@ -40,7 +40,7 @@
 
 1. **OK** をクリックします。
 
-## 3. サンプルデータの追加
+## 4. サンプルデータの追加
 
 1. データエクスプローラーのCOLLECTIONペインにて、 **Stocks**データベース内の **Price**コレクションを展開し、**Documents**をクリックします。
 
@@ -50,11 +50,11 @@
 
     ```JSON
     {
-        "ticker": "7203",
-        "stockName": "トヨタ自動車",
-        "price": 6878,
-        "volume": 9547600,
-        "stockValue": 65668392800
+        "ticker": "0001",
+        "stockName": "サンプル1",
+        "price": 500,
+        "volume": 1000,
+        "stockValue": 500000
     }
     ```
 
@@ -62,7 +62,7 @@
 
 1. **Documents** タブで、**Save**アイコンをクリックします。
 
-## 4. データの確認
+## 5. データの確認
 
 1. 追加されたデータは、**Documents** タブのリストからidを選択して確認することができます。
 
@@ -72,8 +72,18 @@
 
     管理項目は編集しないようにして下さい。
 
-## Op. Azure Storage Explorer を使う
+### (参考)　Azure Storage Explorer を使う
 
 デスクトップアプリケーションである **Azure Storage Explorer** を使って、Azure Cosmos DBのデータを操作することができます（プレビュー）。
 
 * 利用手順: [Azure Cosmos DB を Azure Storage Explorer で管理する (プレビュー)](https://docs.microsoft.com/ja-jp/azure/cosmos-db/tutorial-documentdb-and-mongodb-in-storage-explorer)
+
+## 6. Cosmos DBの接続文字列を記録しておく
+
+後続の作業で使うため、Cosmos DBの接続文字列を手元にメモしておきます。
+
+1. **Azure Cosmos DB アカウント** ブレードにて、 **キー** を選択します。
+
+1. **プライマリ接続文字列**をコピーします。
+
+1. 手元のテキストファイル等に保存しておきます
