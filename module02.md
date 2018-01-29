@@ -24,6 +24,8 @@
     $ npm install -g azure-functions-core-tools@core --unsafe-perm true
     ```
 
+    * CLIのインストールにはNode.jsが必要です。macにインストールされていない場合は [Node.js](https://nodejs.org/ja/) 公式ページからインストーラをダウンロードして導入して下さい。
+
 ## 2. ハンズオン用ソースコードの入手
 
 * Gitで入手する
