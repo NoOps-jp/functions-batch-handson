@@ -24,15 +24,20 @@ Visual Studio for MacではGUIを使ったAzureへのFunctionデプロイがサ�
 
 1. Function Appプロジェクト ```AajpFunctions``` をビルドします
 
-1. ターミナルで、 AajpFunctions / bin / Debug(Release) / net461 に移動して以下を実行します
+1. ターミナルで、 ソースディレクトリのプロジェクトフォルダ（```AajpFunctions```など） / bin / Debug(Release) / net461 に移動して以下を実行します
 
-```bash
-$ func azure login
-# コンソールの指示に従ってサインイン処理を行う
+    ```bash
+    $ func azure login
+    # コンソールの指示に従ってサインイン処理を行って下さい。
 
-$ func azure account set d234eb8b-e2a2-4567-a0f6-579f01631743
-$ func azure functionapp publish functions-batchapps
-```
+    # サブスクリプションのリストが出力されるので、Function AppをデプロイしたサブスクリプションのIDにCurrentをセットし直します
+    $ func azure account set xxxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+
+    # 以下のコマンドでFunctionのデプロイを実行します
+    $ func azure functionapp publish functions-batchapps
+    ```
+
+    ```Upload completed successfully.```と表示されればデプロイは完了です
 
 ## ポータルでのデプロイ確認
 
@@ -48,7 +53,7 @@ $ func azure functionapp publish functions-batchapps
 
 [module03](module03.md)で実施したように、Azure Storage Explorerを使って、キューに再度メッセージを追加します。
 
-> ローカルでのFunctionが実行されていないことを確認して下さい。
+> ローカルでFunctionがデバッグ実行されていないことを確認して下さい。
 
 1. [対象のストレージアカウント] - [Queues] - [作成したキュー名] を選択し、ダブルクリックします。
 
