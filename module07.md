@@ -18,15 +18,11 @@ Visual Studio for MacではGUIを使ったAzureへのFunctionデプロイがサ�
 
 1. Visual Studio for Macでデプロイするソリューションを開きます。
 
-1. Function Appプロジェクト ```AajpFunctions``` をビルドします
+1. Function Appプロジェクト ```AajpFunctions``` を再度ビルドします
 
 1. ターミナルで、 AajpFunctions / bin / Debug(Release) / net461 に移動して以下を実行します
 
 ```bash
-$ func azure login
-# コンソールの指示に従ってサインイン処理を行う
-
-$ func azure account set d234eb8b-e2a2-4567-a0f6-579f01631743
 $ func azure functionapp publish functions-batchapps
 ```
 
