@@ -14,6 +14,8 @@
 
 1. デプロイが完了するまで数分待ちます。
 
+    出力コンソールに ```Publish completed``` と表示されれば完了です。
+
 ## Visual Studio for Macを使ったデプロイ
 
 Visual Studio for MacではGUIを使ったAzureへのFunctionデプロイがサポートされていないため、Function AppのCLIツールである[Azure Functions Core Tools]を使います。（ [module02](module02.md)でインストール済み ）
