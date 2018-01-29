@@ -35,10 +35,11 @@ Azure Storage Explorerを使って、キューにメッセージを追加しま�
 
 1. [作成したキュー名]タブの [+ Add Message] ボタンをクリックします。
 
-1. Add Messageダイアログに、任意の文字列を入力します。（例: testなど）
+1. Add Messageダイアログに、任意の文字列を入力します。（例: "test"など）
 
+    - 文字列はダブルクオーテーションで囲って下さい
     - Expireは**1 Minutes**などに変更します
-    - [Encode message body in Base64] はチェックしたままにします。
+    - [Encode message body in Base64] はチェックしたままにします
 
 ### Functionの動作を確認
 
