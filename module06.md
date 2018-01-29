@@ -44,7 +44,7 @@
                     stockValue = decimal.Parse(myQueueItem.Price) * decimal.Parse(myQueueItem.Volume)
                 };
 
-                Thread.Sleep(3000); // 一定の処理負荷をシミュレートするため、擬似的に待機を入れる
+                Thread.Sleep(1000); // 一定の処理負荷をシミュレートするため、擬似的に待機を入れる
             }
         }
 
