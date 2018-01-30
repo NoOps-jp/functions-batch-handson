@@ -68,7 +68,6 @@
         "IsEncrypted": false,
         "Values": {
             "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=xxxxxx;AccountKey=xxxxxxx4bVMg==;EndpointSuffix=core.windows.net",
-            "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=xxxxxx;AccountKey=xxxxxxx4bVMg==;EndpointSuffix=core.windows.net",
             "CosmosDbConnectionString": "AccountEndpoint=https://xxxxxxxx.documents.azure.com:443/;AccountKey=b8PM2D........oLzm254IA==;"
         }
     }
