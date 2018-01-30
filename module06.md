@@ -108,9 +108,8 @@ Azure Storage Explorerを使って、キューにメッセージを追加しま�
     {
         "ticker": "0002",
         "stockName": "サンプル2",
-        "price": 200,
-        "volume": 1000,
-        "stockValue": 200000
+        "price": "200",
+        "volume": "1000"
     }
     ```
     - Expireは**1 Minutes**などに変更します
