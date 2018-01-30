@@ -36,7 +36,7 @@
     $ git clone https://github.com/zenarchitects/functions-batchapps.git
     ```
 
-* zipをダウンロードする
+* zipをダウンロードする（Gitを使わない場合）
 
     * リポジトリ: https://github.com/zenarchitects/functions-batchapps
 
@@ -46,7 +46,7 @@
 
 1. Visual Studioからソースコードのディレクトリにあるソリューションファイル```funnctions-batchapps.sln```を開きます。
 
-1. ```AajpFunctions```ディレクトリ内の```local.settings.json```を開き、[module01](module01.md)でメモしておいたストレージアカウントの接続文字列を```"AzureWebJobsStorage"```に入力して保存します。
+1. ```AajpFunctions```ディレクトリ内の```local.settings.json```を開き、[module01](module01.md)でメモしておいたストレージアカウントの接続文字列を、キー名: ```"AzureWebJobsStorage"```として値を入力し保存します。
 
     ```json
     {
