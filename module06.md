@@ -16,10 +16,10 @@
 
 1. 追加したクラスに以下のようなコードを追加します（namespaceやclass名はプロジェクトに合わせて下さい)。
 
-    ```cs
+    ```csharp
     using System.Threading;
     using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Host;
+    using Microsoft.Extensions.Logging;
 
     namespace AajpFunctions
     {
@@ -30,9 +30,10 @@
             public static void Run(
                 [QueueTrigger("stock-queue-items")] Stock myQueueItem,
                 [DocumentDB("Stocks", "Price", Id = "id", ConnectionStringSetting = "CosmosDbConnectionString")] out dynamic document,
-                TraceWriter log)
+                ILogger log)
             {
-                log.Info($"Request for item with Ticker={myQueueItem.Ticker}.");
+                var ticker = myQueueItem.Ticker;
+                log.LogInformation("Request for item with Ticker={ticker}.", ticker);
 
                 // Cosmos DB出力バインディングを使ってデータを保存
                 document = new
