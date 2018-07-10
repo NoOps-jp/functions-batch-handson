@@ -55,11 +55,11 @@
     * Function実行件数: CUSTOM > [Function名] Count (AGGREGATION: Sum)
     * Function実行時間: CUSTOM > [Function名] Duration (AGGREGATION: Avg)
     * Functionエラー件数: CUSTOM > [Function名] Failures (AGGREGATION: Sum)
-    ![m09-01](images/m09-1.png)
+    ![m09-01](images/m09-01.png)
 
 1. グラフを設定すると以下のように確認することができます。
 
-    ![m09-02](images/m09-2.png)
+    ![m09-02](images/m09-02.png)
 
 ## Op. 組み込みのログを無効にする
 
