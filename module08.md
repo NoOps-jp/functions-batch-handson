@@ -2,24 +2,22 @@
 
 ## 1. キュー発行プロジェクト(C#)の設定
 
-1. Visual Studioでソリューションファイル```funnctions-batchapps.sln```を開きます。
+1. Visual Studioでソリューションファイル`funnctions-batchapps.sln`を開きます。
 
-1. ```StockQueueCreator``` プロジェクトを右クリックし、スタートアッププロジェクトとして設定します。
+1. `StockQueueCreator` プロジェクトを右クリックし、スタートアッププロジェクトとして設定します。
 
-1. ```StockQueueCreator``` プロジェクト以下の ```Program.cs``` を編集できるように開きます。
+1. `StockQueueCreator` プロジェクト以下の `Program.cs` を編集できるように開きます。
 
 1. コード内の以下文字列をそれぞれ変更します。
 
-    * ```{YOUR STORAGE CONNECTION STRING}```: [module01](module01.md)でメモしておいたストレージアカウントの接続文字列
-    * ```{YOUR QUEUE NAME}```: [module06](module06.md)で設定したキュー名（ ```stock-queue-items``` など）
+    * 24行目 `{YOUR STORAGE CONNECTION STRING}`: [module01](module01.md)でメモしておいたストレージアカウントの接続文字列に変更
+    * 26行目 `{YOUR QUEUE NAME}`: [module06](module06.md)で設定したキュー名に変更（ `stock-queue-items` など）
 
-    > 本来、ソースコード内に直接接続文字列を記述することは望ましくありません。
+> 本来、ソースコード内に直接接続文字列を記述することは望ましくありません。
 
 ## 2. 大量メッセージの発行
 
-1. ```StockQueueCreator``` プロジェクトをビルドします。
-
-1. ```StockQueueCreator``` プロジェクトをデバッグ実行します。
+1. `StockQueueCreator` プロジェクトをデバッグ実行します。
 
 1. コンソールに実行状況が表示されていることを確認します。
 
@@ -37,7 +35,7 @@
     Completed enqueue
     ```
 
-    * Completedは待たずに次のステップに進んで構いません。
+    * "Completed enqueue" は待たずに次のステップに進んで構いません。
 
 ## 3. 処理状況の確認
 

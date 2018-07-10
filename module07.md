@@ -6,11 +6,11 @@
 
 1. Visual Studioでデプロイするソリューションを開きます。
 
-1. デプロイするプロジェクト ```AajpFunctions``` を右クリックし > **[発行]** をクリックします。
+1. デプロイするプロジェクト `AajpFunctions` を右クリックし > **[発行]** をクリックします。
 
 1. デプロイが完了するまで数分待ちます。
 
-    出力コンソールに ```Publish completed``` と表示されれば完了です。
+    出力コンソールに `Publish completed` と表示されれば完了です。
 
 ## 2. Visual Studio for Macを使ったデプロイ
 
@@ -18,7 +18,7 @@ Visual Studio for MacではGUIを使ったAzureへのFunctionデプロイがサ�
 
 1. Visual Studio for Macでデプロイするソリューションを開きます。
 
-1. Function Appプロジェクト ```AajpFunctions``` を再度ビルドします
+1. Function Appプロジェクト `AajpFunctions` を再度ビルドします
 
 1. ターミナルで、 AajpFunctions / bin / Debug(Release) / net461 に移動して以下を実行します
 
@@ -30,7 +30,7 @@ $ func azure functionapp publish functions-batchapps
 
 1. Azureポータルの全体メニューで **Fanction App** をクリックし、デプロイしたFunction Appを選択します。
 
-1. Function App画面で、該当のFunction App以下にある[関数]を展開して、追加したFunction（ ```CosmosBinding``` など）が表示されていればデプロイは完了しています。
+1. Function App画面で、該当のFunction App以下にある[関数]を展開して、追加したFunction（ `CosmosBinding` など）が表示されていればデプロイは完了しています。
 
 ## 4. Cosmos DB 接続文字列の追加
 
@@ -57,7 +57,7 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 1. [対象のストレージアカウント] - [Queues] - [キュー名] を選択し、ダブルクリックします。
 
-    * キューは、module06で作成したキュー名( ```stock-queue-items``` など)を選択します
+    * キューは、module06で作成したキュー名( `stock-queue-items` など)を選択します
 
 1. [キュー名]タブの [+ Add Message] ボタンをクリックします。
 
@@ -77,7 +77,7 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 ## 6. デプロイしたFunctionの動作確認
 
-1. Function App画面で、該当のFunction App以下にある[関数] - [追加したFunction名（ ```CosmosBinding``` など）]を展開します。
+1. Function App画面で、該当のFunction App以下にある[関数] - [追加したFunction名（ `CosmosBinding` など）]を展開します。
 
 1. [モニター] をクリックして、Functionの実行結果を確認します。
 
