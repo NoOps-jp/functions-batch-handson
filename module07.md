@@ -53,7 +53,7 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 [module06](module06.md)で実施したように、Azure Storage Explorerを使って、キューに再度メッセージを追加します。
 
-> ローカルでFunctionがデバッグ実行されていないことを確認して下さい。
+> ローカルのエミュレータ−ではなく、Azure上のキューを選択して下さい。
 
 1. [対象のストレージアカウント] - [Queues] - [キュー名] を選択し、ダブルクリックします。
 
@@ -73,8 +73,7 @@ Function AppからCosmos DBに接続するための情報を設定します。
     }
     ```
 
-    - Expireは**1 Minutes**などに変更します
-    - [Encode message body in Base64] はチェックしたままにします。
+    * [Encode message body in Base64] はチェックしたままにします。
 
 ## 6. デプロイしたFunctionの動作確認
 
@@ -82,7 +81,9 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 1. [モニター] をクリックして、Functionの実行結果を確認します。
 
-    ![m07-1](images/m07-1.png)
+    * 「構成」ボタンのみ表示されている場合は、画面上部の **[クラシックビューに切り替えます]** リンクをクリックして下さい。
+
+        ![m07-1](images/m07-1.png)
 
     > 反映するまで数分時間をおく必要があります。定期的に [Refresh] をクリックして下さい。
 
@@ -90,7 +91,7 @@ Function AppからCosmos DBに接続するための情報を設定します。
 
 1. Azureポータルの全体メニューで **Azure Cosmos DB** をクリックし、対象のデータベースアカウント名を選択します。
 
-1. **Azure Cosmos DB アカウント** ブレードにて、 **データエクスプローラー** をクリックします。
+1. **Azure Cosmos DB account** ブレードにて、 **Data Explorer** をクリックします。
 
 1. [Stocks] データベースの [Price] コレクションをクリックします。
 
